@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .container{
+            height: 30vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-rows: 80% 20%;  
+            background-color: #0052ff;
+            margin-bottom: 2.5rem;
+        }
+
+        .navbar{
+            grid-area: 2/1/2/6;
+            background-color: #3773f5;
+        }
+        .header{
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            color: white;
+            grid-area: 1/3/1/4;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        h1{
+            font-family: 'Libre Baskerville', serif;font-family: 'Roboto', sans-serif;
+            font-size: 50px;
+
+        }
+        .n-items{
+            height: 100%;
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Libre Baskerville', serif;
+            font-family: 'Roboto', sans-serif;
+        }
+        p{
+            padding: 2rem;
+        }
+
+        .body{
+            /* height: 30vh; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 1rem;
+            font-family: 'Libre Baskerville', serif;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 10rem;
+        }
+        .sec{
+            background-color: whitesmoke;
+            min-width: 12rem;
+            max-width: 18rem;
+            text-align: center;
+            padding-top: 18px;
+            padding-bottom: 5px;
+            border-radius:10%;
+            margin: 10px;
+        }
+        img{
+            height: 6rem;
+            padding: 15px;
+        }
+        @media (max-width:650px) {
+            .body{
+                flex-direction: column;align-items: center;
+            }
+            .navbar{
+                display: none;
+            }
+        }
+        .buy{
+            color: white;
+            height: 1.6rem;
+            position: relative;left: 3.3rem;
+            width: 5rem;
+            margin-bottom: 10px;
+            background-color: #0d995f;
+            padding: 2px;
+            border-radius:5%;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .sell{
+            background-color: red;
+            margin-bottom: 18px;
+
+        }
+        .body-text{
+            text-align: center;
+            margin: 1.5rem;
+            font-family: 'Libre Baskerville', serif;font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            color: black;
+            margin-bottom: 3.5rem;
+        }
+        .footer{
+            background-color: black;
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            height: 35vh;
+            width: 100%;
+        }
+        .copyright{
+            background-color: black;
+            width: 100%;
+        }
+        .disclaimer{
+            width: 100%;
+            background-color: black;
+        }
+        .label{
+            color: white;
+            display: flex;
+            height: 100%;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .c{
+            height: 3rem;
+            padding-bottom: 7.4rem;
+        }
+        .company-details{
+            color: white;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            padding: 2.4rem;
+        }
+        .footer-cpy-name{
+            font-family: 'Libre Baskerville', serif;font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            color: #0052ff;
+        }
+        
+        .footer-p{
+            padding: 6.5px;
+        }
+        .footer-margin{
+            background-color: black;
+        }
+
+        section{
+            margin-bottom: 4rem;
+        }
+
+        .features{
+            margin-top: 3rem;
+            height: 30vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 30% 70%;
+            margin-bottom: 15rem;
+        }
+
+        .benifit-h2{
+            grid-area: 1/1/1/3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0rem;
+            font-size: 3rem;
+            font-family: 'Libre Baskerville', serif;font-family: 'Roboto', sans-serif;
+        }
+        .left-benifit{
+            grid-area: 2/1/2/2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 4rem;
+            color:  #15e29e;
+            font-family: 'Libre Baskerville', serif;font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+        }
+        .right-benifit{
+            grid-area: 2/2/2/3;
+            display: flex;
+            flex-direction: column;
+            padding-top: 4rem;
+            font-family: 'Libre Baskerville', serif;font-family: 'Roboto', sans-serif;
+            color:  #15e29e;
+            font-size: 2rem;
+            align-items: center;
+        }
+
+        @media (max-width:650px){
+            .footer-cpy-name{
+                font-size: 1.5rem;
+            }
+            .benifit{
+                font-size: 1.3rem;
+            }
+            .left-benifit{
+                padding-left: 0rem;
+            }
+            .features-img{
+                height: 3rem;
+            }
+            .sec{
+                width: 16rem;
+            }
+            .buy{
+                position: relative;left: 5.3rem;
+            }
+        }
+        .features-img{
+            height: 8rem;
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1>CoinTrade</h1>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="n-items">
+                <p>Crypto</p>
+                <p>Buy</p>
+                <p>Sell</p>
+                <p>About</p>
+                <p>Contact</p>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="features">
+            <h2 class="benifit-h2">Benifits</h2>
+            <div class="left-benifit">
+                <h2 class="benifit">Buy Crypto</h2>
+                <img class="features-img" src="./3465111-200.png" alt="">
+            </div>
+            <div class="right-benifit">
+                <h2 class="benifit">Trade Crypto</h2>
+                <img class="features-img" src="./Candle_chart.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="body-text"><h2>Trending Coins</h2></div>
+    <div class="body">
+        <div class="sec 1">
+            <h2>Bitcoin</h2>
+            <img src="./Bitcoin.svg.png" alt="bitcoin logo">
+            <div class="buy"><h3>Buy</h3></div>
+            <div class="buy sell"><h3>Sell</h3></div>
+        </div>
+        <div class="sec 2">
+            <h2>Etherium</h2>
+            <img src="./ethereum-eth-logo.png" alt="etherium logo">
+            <div class="buy"><h3>Buy</h3></div>
+            <div class="buy sell"><h3>Sell</h3></div>
+        </div>
+        <div class="sec 3">
+            <h2>Binance</h2>
+            <img src="./Binance-Icon-Logo.wine.svg" alt="binance logo">
+            <div class="buy"><h3>Buy</h3></div>
+            <div class="buy sell"><h3>Sell</h3></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <div class="label">
+                    <img class="c" src="./copyright_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                </div>
+            </div>
+            <div class="disclaimer">
+                <div class="company-details">
+                    <h2 class="footer-cpy-name">CoinTrade</h2>
+                    <p class="footer-p" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi corrupti inventore soluta odio iusto dolore, sit sunt dignissimos dolores? Explicabo, distinctio facere amet inventore fugit nulla expedita cum quibusdam asperiores.</p>
+                </div>
+            </div>
+            <div class="footer-margin"></div>
+        </div>
+    </footer>
+</body>
+</html>
